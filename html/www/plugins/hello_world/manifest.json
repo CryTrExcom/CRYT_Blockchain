@@ -1,0 +1,10 @@
+{
+  "pluginVersion": 1,
+  "name": "Hello World CRYT",
+  "myVersion": "v.1.0",
+  "shortDescription": "CRYT Official Website",
+  "infoUrl": "https://cryt.crytrex.com",
+  "startPage": "p_hello_world",
+  "nrsVersion": "1.11.15",
+  "deactivated": true
+}
