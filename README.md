@@ -19,7 +19,6 @@ CRYT is a Blockchain ecosystem to make the world a better place.
 
   - Download this Repository and extract or `git clone https://github.com/CryTrExcom/CRYT_Blockchain.git`.
   - Go to CRYT_Blockchain Folder.
-  - Compile with sh ./compile.sh (Linux) or win-compile.sh (Windows).
   - Run with sh ./run.sh (Linux) or run.bat (Windows).
 
   - wait for the JavaFX wallet window to open.
@@ -53,11 +52,6 @@ CRYT is a Blockchain ecosystem to make the world a better place.
 ----
 ## Further Reading ##
 
-  - in this repository:
-    - USERS-GUIDE.md
-    - DEVELOPERS-GUIDE.md
-    - OPERATORS-GUIDE.md
-    - In the doc folder
     - Official Website: https://crytrex.com
     - Click Wiki on Official Website for all Detailed Informations.
 
