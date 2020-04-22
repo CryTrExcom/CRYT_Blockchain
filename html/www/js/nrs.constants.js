@@ -70,7 +70,7 @@ var NRS = (function (NRS, $) {
         'NOT_FORGING': 'not_forging',
         'UNKNOWN': 'unknown',
         'LAST_KNOWN_BLOCK': '0',
-        'LAST_KNOWN_TESTNET_BLOCK': {"0"},
+        'LAST_KNOWN_TESTNET_BLOCK': {},
         'INITIAL_BASE_TARGET': 153722867,
         'SCHEDULE_PREFIX': "schedule"
     };
