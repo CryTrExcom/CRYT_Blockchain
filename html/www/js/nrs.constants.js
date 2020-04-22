@@ -69,8 +69,8 @@ var NRS = (function (NRS, $) {
         'FORGING': 'forging',
         'NOT_FORGING': 'not_forging',
         'UNKNOWN': 'unknown',
-        'LAST_KNOWN_BLOCK': '',
-        'LAST_KNOWN_TESTNET_BLOCK': {},
+        'LAST_KNOWN_BLOCK': '0',
+        'LAST_KNOWN_TESTNET_BLOCK': {"0"},
         'INITIAL_BASE_TARGET': 153722867,
         'SCHEDULE_PREFIX': "schedule"
     };
@@ -119,7 +119,7 @@ var NRS = (function (NRS, $) {
             NRS.constants.DISABLED_APIS = response.disabledAPIs;
             NRS.constants.DISABLED_API_TAGS = response.disabledAPITags;
             NRS.constants.PEER_STATES = response.peerStates;
-            NRS.constants.LAST_KNOWN_BLOCK.id = "8255049179473265947";
+            NRS.constants.LAST_KNOWN_BLOCK.id = "0";
             NRS.loadTransactionTypeConstants(response);
             NRS.constants.PROXY_NOT_FORWARDED_REQUESTS = response.proxyNotForwardedRequests;
             NRS.constants.COIN_SYMBOL = response.coinSymbol;
