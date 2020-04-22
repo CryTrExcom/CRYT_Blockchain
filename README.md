@@ -6,15 +6,6 @@
 CRYT is a Blockchain ecosystem to make the world a better place.
 
 ----
-## Get it! ##
-
-  - *dependencies*:
-    - *general* - Java 8
-    - *Ubuntu* - `http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html`
-    - *Debian* - `http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html`
-    - *FreeBSD* - `pkg install openjdk8`
-
-----
 ## Run it! ##
 
   - Download this Repository and extract or `git clone https://github.com/CryTrExcom/CRYT_Blockchain.git`.
@@ -23,6 +14,33 @@ CRYT is a Blockchain ecosystem to make the world a better place.
 
   - wait for the JavaFX wallet window to open.
   - on platforms without JavaFX, open http://localhost:11112/ in a browser.
+
+----
+## CRYT_Blockchain on Android Device! ##
+
+  - Now is possible to run the CRYT_Blockchain on Android Device following this tutorial. HELP THE NETWORK TO GROW!
+  - Setting up Node on Android take around 15 minutes following these steps.
+
+  - 1) Install UserLAnd from Google Play, Open and Install Ubuntu - https://play.google.com/store/apps/details?id=tech.ula
+  - 2) On Console run these commands to setup:
+  - `sudo apt-get update`
+  - `sudo apt-get install build-essential`
+  - `sudo apt-get install git`
+  - `sudo apt-get install default-jdk`
+  - `sudo apt-get install wget`
+  - `sudo apt-get install zip`
+  - `git clone https://github.com/CryTrExcom/CRYT_Blockchain.git`
+  - `cd CRYT_Blockchain`
+  - `sh ./compile.sh`
+  - 3) Download a snapshot of CRYT_Blockchain @ block 1152908
+  - `wget https://crytrex.com/cryt_db.zip`
+  - 4) When download is finished run this command:
+  - `unzip cryt_db.zip`
+  - 5) Run the Node
+  - `sh ./start.sh`
+
+Now can close window of UserLAnd, Kepp active the UserLand Terminal and activate Wake Lock!
+DONE!
 
 ----
 ## Troubleshooting the NRS (CRYT Reference Software) ##
@@ -52,7 +70,7 @@ CRYT is a Blockchain ecosystem to make the world a better place.
 ----
 ## Further Reading ##
 
-    - Official Website: https://crytrex.com
+    - Official Website: https://cryt.crytrex.com
     - Click Wiki on Official Website for all Detailed Informations.
 
 ----
