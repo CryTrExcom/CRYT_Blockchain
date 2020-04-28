@@ -47,7 +47,7 @@ public final class Constants {
     public static final int LEASING_DELAY = isTestnet ? Nxt.getIntProperty("nxt.testnetLeasingDelay", 1440) : 1440;
     public static final long MIN_FORGING_BALANCE_NQT = 1000 * ONE_NXT;
 
-    public static final int MAX_TIMEDRIFT = 15; // allow up to 15 s clock difference
+    public static final int MAX_TIMEDRIFT = 10; // allow up to 15 s clock difference
     public static final int FORGING_DELAY = Nxt.getIntProperty("nxt.forgingDelay");
     public static final int FORGING_SPEEDUP = Nxt.getIntProperty("nxt.forgingSpeedup");
     public static final int BATCH_COMMIT_SIZE = Nxt.getIntProperty("nxt.batchCommitSize", Integer.MAX_VALUE);
