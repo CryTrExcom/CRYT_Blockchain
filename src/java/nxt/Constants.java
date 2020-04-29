@@ -20,18 +20,18 @@ public final class Constants {
     public static final long MAX_BALANCE_NQT = MAX_BALANCE_NXT * ONE_NXT;
 
     public static final int BLOCK_TIME = 20;
-    public static final long INITIAL_BASE_TARGET = 461168601;
+    public static final long INITIAL_BASE_TARGET = BigInteger.valueOf(2).pow(63).divide(BigInteger.valueOf(BLOCK_TIME * MAX_BALANCE_NXT)).longValue(); //153722867;
     public static final long MAX_BASE_TARGET = INITIAL_BASE_TARGET * (isTestnet ? MAX_BALANCE_NXT : 50);
     public static final long MIN_BASE_TARGET = INITIAL_BASE_TARGET * 9 / 10;
-    public static final int MIN_BLOCKTIME_LIMIT = 18;
-    public static final int MAX_BLOCKTIME_LIMIT = 45;
+    public static final int MIN_BLOCKTIME_LIMIT = BLOCK_TIME - 7;
+    public static final int MAX_BLOCKTIME_LIMIT = BLOCK_TIME + 7;
     public static final int BASE_TARGET_GAMMA = 64;
     public static final int MAX_ROLLBACK = Math.max(Nxt.getIntProperty("nxt.maxRollback"), 720);
     public static final int GUARANTEED_BALANCE_CONFIRMATIONS = isTestnet ? Nxt.getIntProperty("nxt.testnetGuaranteedBalanceConfirmations", 1440) : 1440;
     public static final int LEASING_DELAY = isTestnet ? Nxt.getIntProperty("nxt.testnetLeasingDelay", 1440) : 1440;
     public static final long MIN_FORGING_BALANCE_NQT = 1000 * ONE_NXT;
 
-    public static final int MAX_TIMEDRIFT = 10; // allow up to 15 s clock difference
+    public static final int MAX_TIMEDRIFT = 15; // allow up to 15 s clock difference
     public static final int FORGING_DELAY = Nxt.getIntProperty("nxt.forgingDelay");
     public static final int FORGING_SPEEDUP = Nxt.getIntProperty("nxt.forgingSpeedup");
     public static final int BATCH_COMMIT_SIZE = Nxt.getIntProperty("nxt.batchCommitSize", Integer.MAX_VALUE);
@@ -116,13 +116,14 @@ public final class Constants {
     public static final int MAX_TAGGED_DATA_DATA_LENGTH = 42 * 1024;
 
     public static final int MAX_REFERENCED_TRANSACTION_TIMESPAN = 60 * 1440 * 60;
-    public static final int CHECKSUM_BLOCK_1 = isTestnet ? 0 : 1179999;
+    public static final int CHECKSUM_BLOCK_1 = Integer.MAX_VALUE;
 
-    public static final int LAST_CHECKSUM_BLOCK = CHECKSUM_BLOCK_1;
-    public static final int LAST_KNOWN_BLOCK = CHECKSUM_BLOCK_1;
+    public static final int LAST_CHECKSUM_BLOCK = 0;
+    // LAST_KNOWN_BLOCK must also be set in html/www/js/nrs.constants.js
+    public static final int LAST_KNOWN_BLOCK = 0;
 
-    public static final int[] MIN_VERSION = new int[] {1, 20, 00};
-    public static final int[] MIN_PROXY_VERSION = new int[] {1, 20, 00};
+    public static final int[] MIN_VERSION = new int[] {1, 11, 15};
+    public static final int[] MIN_PROXY_VERSION = new int[] {1, 11, 15};
 
     static final long UNCONFIRMED_POOL_DEPOSIT_NQT = (isTestnet ? 50 : 100) * ONE_NXT;
     public static final long SHUFFLING_DEPOSIT_NQT = (isTestnet ? 7 : 1000) * ONE_NXT;
