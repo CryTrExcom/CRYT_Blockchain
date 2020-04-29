@@ -1,19 +1,3 @@
-/*
- * Copyright © 2013-2016 The Nxt Core Developers.
- * Copyright © 2016-2019 Jelurida IP B.V.
- *
- * See the LICENSE.txt file at the top-level directory of this distribution
- * for licensing information.
- *
- * Unless otherwise agreed in a custom licensing agreement with Jelurida B.V.,
- * no part of the Nxt software, including this file, may be copied, modified,
- * propagated, or distributed except according to the terms contained in the
- * LICENSE.txt file.
- *
- * Removal or modification of this copyright notice is prohibited.
- *
- */
-
 package nxt;
 
 import java.math.BigInteger;
@@ -36,11 +20,11 @@ public final class Constants {
     public static final long MAX_BALANCE_NQT = MAX_BALANCE_NXT * ONE_NXT;
 
     public static final int BLOCK_TIME = 20;
-    public static final long INITIAL_BASE_TARGET = BigInteger.valueOf(2).pow(63).divide(BigInteger.valueOf(BLOCK_TIME * MAX_BALANCE_NXT)).longValue(); //153722867;
+    public static final long INITIAL_BASE_TARGET = 461168601;
     public static final long MAX_BASE_TARGET = INITIAL_BASE_TARGET * (isTestnet ? MAX_BALANCE_NXT : 50);
     public static final long MIN_BASE_TARGET = INITIAL_BASE_TARGET * 9 / 10;
-    public static final int MIN_BLOCKTIME_LIMIT = BLOCK_TIME - 7;
-    public static final int MAX_BLOCKTIME_LIMIT = BLOCK_TIME + 7;
+    public static final int MIN_BLOCKTIME_LIMIT = 18;
+    public static final int MAX_BLOCKTIME_LIMIT = 45;
     public static final int BASE_TARGET_GAMMA = 64;
     public static final int MAX_ROLLBACK = Math.max(Nxt.getIntProperty("nxt.maxRollback"), 720);
     public static final int GUARANTEED_BALANCE_CONFIRMATIONS = isTestnet ? Nxt.getIntProperty("nxt.testnetGuaranteedBalanceConfirmations", 1440) : 1440;
@@ -135,11 +119,10 @@ public final class Constants {
     public static final int CHECKSUM_BLOCK_1 = isTestnet ? 0 : 1179999;
 
     public static final int LAST_CHECKSUM_BLOCK = CHECKSUM_BLOCK_1;
-    // LAST_KNOWN_BLOCK must also be set in html/www/js/nrs.constants.js
     public static final int LAST_KNOWN_BLOCK = CHECKSUM_BLOCK_1;
 
-    public static final int[] MIN_VERSION = new int[] {1, 11, 15};
-    public static final int[] MIN_PROXY_VERSION = new int[] {1, 11, 15};
+    public static final int[] MIN_VERSION = new int[] {1, 20, 00};
+    public static final int[] MIN_PROXY_VERSION = new int[] {1, 20, 00};
 
     static final long UNCONFIRMED_POOL_DEPOSIT_NQT = (isTestnet ? 50 : 100) * ONE_NXT;
     public static final long SHUFFLING_DEPOSIT_NQT = (isTestnet ? 7 : 1000) * ONE_NXT;
