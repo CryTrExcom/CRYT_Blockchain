@@ -1,22 +1,3 @@
-/******************************************************************************
- * Copyright © 2013-2016 The Nxt Core Developers.                             *
- * Copyright © 2016-2019 Jelurida IP B.V.                                     *
- *                                                                            *
- * See the LICENSE.txt file at the top-level directory of this distribution   *
- * for licensing information.                                                 *
- *                                                                            *
- * Unless otherwise agreed in a custom licensing agreement with Jelurida B.V.,*
- * no part of the Nxt software, including this file, may be copied, modified, *
- * propagated, or distributed except according to the terms contained in the  *
- * LICENSE.txt file.                                                          *
- *                                                                            *
- * Removal or modification of this copyright notice is prohibited.            *
- *                                                                            *
- ******************************************************************************/
-
-/**
- * @depends {nrs.js}
- */
 var NRS = (function (NRS, $) {
     NRS.constants = {
         'DB_VERSION': 2,
@@ -118,7 +99,7 @@ var NRS = (function (NRS, $) {
             NRS.constants.DISABLED_APIS = response.disabledAPIs;
             NRS.constants.DISABLED_API_TAGS = response.disabledAPITags;
             NRS.constants.PEER_STATES = response.peerStates;
-            NRS.constants.LAST_KNOWN_BLOCK.id = "0";
+            NRS.constants.LAST_KNOWN_BLOCK.id = "1734815012243690953";
             NRS.loadTransactionTypeConstants(response);
             NRS.constants.PROXY_NOT_FORWARDED_REQUESTS = response.proxyNotForwardedRequests;
             NRS.constants.COIN_SYMBOL = response.coinSymbol;
@@ -132,7 +113,7 @@ var NRS = (function (NRS, $) {
             NRS.constants.ACCOUNT_MASK_UNDERSCORE = response.accountPrefix + "-____-____-____-_____";
             NRS.constants.ACCOUNT_MASK_PREFIX = response.accountPrefix + "-";
             NRS.constants.GENESIS_RS = NRS.convertNumericToRSAccountFormat(response.genesisAccountId);
-            NRS.constants.INITIAL_BASE_TARGET = parseInt(response.initialBaseTarget);
+            NRS.constants.INITIAL_BASE_TARGET = "461168601";
             NRS.constants.CURRENCY_TYPES = response.currencyTypes;
             console.log("done loading server constants");
             if (resolve) {
