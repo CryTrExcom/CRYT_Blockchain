@@ -114,8 +114,6 @@ public final class Nxt {
                 }
             } else {
                 try (InputStream is = ClassLoader.getSystemResourceAsStream(propertiesFile)) {
-                    // When running nxt.exe from a Windows installation we always have nxt.properties in the classpath but this is not the nxt properties file
-                    // Therefore we first load it from the classpath and then look for the real nxt.properties in the user folder.
                     if (is != null) {
                         System.out.printf("Loading %s from classpath\n", propertiesFile);
                         properties.load(is);
@@ -388,7 +386,7 @@ public final class Nxt {
                 long currentTime = System.currentTimeMillis();
                 Logger.logMessage("Initialization took " + (currentTime - startTime) / 1000 + " seconds");
                 Logger.logMessage(Nxt.APPLICATION + " server " + VERSION + " started successfully.");
-                Logger.logMessage("Copyright © 2019 CryTrEx.com");
+                Logger.logMessage("Copyright © 2018-2020 CRYT Blockchain");
                 if (API.getWelcomePageUri() != null) {
                     Logger.logMessage("Client UI is at " + API.getWelcomePageUri());
                 }
