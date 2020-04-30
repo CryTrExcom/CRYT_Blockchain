@@ -21,7 +21,7 @@ public final class Constants {
 
     public static final int BLOCK_TIME = 20;
     public static final long INITIAL_BASE_TARGET = BigInteger.valueOf(2).pow(63).divide(BigInteger.valueOf(BLOCK_TIME * MAX_BALANCE_NXT)).longValue(); //153722867;
-    public static final long MAX_BASE_TARGET = INITIAL_BASE_TARGET * (isTestnet ? MAX_BALANCE_NXT : 50);
+    public static final long MAX_BASE_TARGET = INITIAL_BASE_TARGET * (isTestnet ? MAX_BALANCE_NXT : 150);
     public static final long MIN_BASE_TARGET = INITIAL_BASE_TARGET * 9 / 10;
     public static final int MIN_BLOCKTIME_LIMIT = BLOCK_TIME - 7;
     public static final int MAX_BLOCKTIME_LIMIT = BLOCK_TIME + 7;
@@ -117,10 +117,11 @@ public final class Constants {
 
     public static final int MAX_REFERENCED_TRANSACTION_TIMESPAN = 60 * 1440 * 60;
     public static final int CHECKSUM_BLOCK_1 = Integer.MAX_VALUE;
+    public static final int CHECKSUM_BLOCK_2 = isTestnet ? 0 : 1000000;
 
-    public static final int LAST_CHECKSUM_BLOCK = 0;
+    public static final int LAST_CHECKSUM_BLOCK = CHECKSUM_BLOCK_2;
     // LAST_KNOWN_BLOCK must also be set in html/www/js/nrs.constants.js
-    public static final int LAST_KNOWN_BLOCK = 0;
+    public static final int LAST_KNOWN_BLOCK = CHECKSUM_BLOCK_2;
 
     public static final int[] MIN_VERSION = new int[] {1, 11, 15};
     public static final int[] MIN_PROXY_VERSION = new int[] {1, 11, 15};
