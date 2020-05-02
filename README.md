@@ -16,7 +16,7 @@ CRYT is a Blockchain ecosystem to make the world a better place.
   - on platforms without JavaFX, open http://localhost:11112/ in a browser.
 
 ----
-## Blockchain SnapShot 28 April 2020! ##
+## Blockchain SnapShot 2 May 2020 v 1.30.10! ##
 
   - Download a copy of Blockchain, extract to CRYT_Blockchain (linux) C:\Users\YOURNAME\AppData\Roaming\CRYTREXCOIN (windows) 
   `https://crytrex.com/cryt_db.zip`.
