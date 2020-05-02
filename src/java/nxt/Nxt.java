@@ -35,8 +35,8 @@ import java.util.Properties;
 
 public final class Nxt {
 
-    public static final String VERSION = "1.30.00";
-    public static final String APPLICATION = "CryTrExCoin";
+    public static final String VERSION = "1.30.10";
+    public static final String APPLICATION = "CrytrexCoin";
 
     private static volatile Time time = new Time.EpochTime();
 
@@ -386,7 +386,7 @@ public final class Nxt {
                 long currentTime = System.currentTimeMillis();
                 Logger.logMessage("Initialization took " + (currentTime - startTime) / 1000 + " seconds");
                 Logger.logMessage(Nxt.APPLICATION + " server " + VERSION + " started successfully.");
-                Logger.logMessage("Copyright © 2018-2020 CRYT Blockchain");
+                Logger.logMessage("Copyright 2018-2020 CRYT Blockchain");
                 if (API.getWelcomePageUri() != null) {
                     Logger.logMessage("Client UI is at " + API.getWelcomePageUri());
                 }
