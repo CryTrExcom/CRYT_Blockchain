@@ -1,6 +1,6 @@
-CRYT-client-1.11.15:
+CRYT-client-1.30.10:
 
 Initial Release
+https://cryt.crytrex.com
 
-
-https://crytrex.com
+Based on nxt NRS Software
